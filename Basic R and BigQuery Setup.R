@@ -9,8 +9,10 @@ suppressMessages({
   library(bigrquery)
   })
 
+# Enter in GCP/BigQuery project
 project_id <- "gcp-data-science-demo"
 
+# Example query using iris public dataset
 example_query_text <- "
   SELECT *
   FROM
@@ -23,8 +25,8 @@ example_query_text <- "
 # will likely ask if you'd like to use a pre-authorized account for bigrquery
 example_query_results <- bq_project_query(project_id, example_query_text) %>%
   bq_table_download()
- 
 
+# See example query results 
 example_query_results
 
 
@@ -39,4 +41,5 @@ con <- DBI::dbConnect(bigquery(), project = project_id)
 # will likely ask if you'd like to use a pre-authorized account for bigrquery
 example_query_results <- DBI::dbGetQuery(con, example_query_text)
 
+# See example query results
 example_query_results

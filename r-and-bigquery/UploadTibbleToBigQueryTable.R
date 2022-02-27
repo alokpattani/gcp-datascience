@@ -12,6 +12,9 @@ UploadTibbleToBigQueryTable <- function(tibble_to_upload, bq_table_name,
     return()
   }
 
+  # Re-authenticate BigQuery within function (can help when running in parallel)
+  bq_auth(path = bq_auth_file_path, cache = TRUE)  
+  
   # Turn to uppercase in case it didn't come in that way
   upload_type <- toupper(upload_type)  
     
@@ -59,9 +62,6 @@ UploadTibbleToBigQueryTable <- function(tibble_to_upload, bq_table_name,
   } else {
     table_upload_write_disposition <- 'WRITE_TRUNCATE'
   }
-
-  # Re-run BQ auth before uploading (can help when running in parallel)
-  bq_auth(path = bq_auth_file_path, cache = TRUE)
   
   # Only need to execute delete query logic if appending & row keys provided
   if(upload_type == 'APPEND' & 

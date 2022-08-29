@@ -45,7 +45,7 @@ UploadTibbleToBigQueryTable <- function(tibble_to_upload, bq_table_name,
     output_bq_fields_object <- as_bq_fields(tibble_for_bq_upload)
   } else {
     output_bq_table_new <- FALSE
-    # Use pointer to BQ table to get table fields w/ appropriate types for upload  
+    # Use pointer to BQ table to get fields w/ appropriate types for upload  
     output_bq_fields_object <- output_bq_table %>% bq_table_fields()
     
     output_bq_fields_df <- bq_table_meta(output_bq_table)$schema$fields %>%
@@ -101,17 +101,113 @@ UploadTibbleToBigQueryTable <- function(tibble_to_upload, bq_table_name,
       " using query\n", delete_query_sql_text, "\n"))
   }
   
-  # Upload desired table to BigQuery
-  bq_table_upload(
-    x = output_bq_table,
-    values = tibble_for_bq_upload, 
-    fields = output_bq_fields_object,
-    write_disposition = table_upload_write_disposition
-    )
+
+  # Next section checks if tibble to upload is "too big", if so, chunk into
+  # groups and upload separately to avoid getting error related to data size:
+  # "Error in rawToChar(rawConnectionValue(con)) : 
+  #   long vectors not supported yet: raw.c:68 "
   
-  cat(paste0("\nOutputted (", table_upload_write_disposition, ") ",
-    nrow(tibble_for_bq_upload), " rows to ", 
-    ifelse(output_bq_table_new, "new", "existing"), " BigQuery table ",
-    output_bq_table_full_name, "\n")
-    )
+  # Based on testing, use limits of 2M rows and 500MB object size as thresholds
+  # for which to divide up tibble into smaller pieces before uploading
+  TIBBLE_ROW_NUM_THRESHOLD <- 2E6
+  TIBBLE_OBJECT_SIZE_THRESHOLD_MB <- 500
+  
+  # Calculate # groups to divide tibble into based on row # vs threshold
+  tibble_row_num_groups <- (nrow(tibble_for_bq_upload) / 
+    TIBBLE_ROW_NUM_THRESHOLD) %>%
+    ceiling()
+
+  # Calculate # groups to divide tibble into based on object size vs threshold
+  tibble_object_size_num_groups <- ((object.size(tibble_for_bq_upload) %>% 
+    format(units = "MB") %>% 
+    str_replace(" Mb", "") %>% 
+    as.numeric()
+    ) / TIBBLE_OBJECT_SIZE_THRESHOLD_MB) %>%
+    ceiling()
+  
+  # Take max of num groups based on row # and object size to be conservative
+  tibble_num_groups <- max(tibble_row_num_groups, tibble_object_size_num_groups)
+  
+  # Build function within this function (using some fields created above) to 
+  # abstract over BigQuery upload and printing summary to console
+  nest_fn_upload_to_bq_and_print_summary <- function(fn_tibble_for_upload,
+    fn_table_upload_write_disposition, fn_group_num = 1, fn_max_group_num = 1)
+  {
+    bq_table_upload(
+      x = output_bq_table, # "Constant" w/in this function, from outer code
+      values = fn_tibble_for_upload,
+      fields = output_bq_fields_object, # "Constant" w/in this function
+      write_disposition = fn_table_upload_write_disposition
+      )
+    
+    # Print summary of upload job to R console
+    bq_upload_summary_text <- paste0("\nUploaded (", 
+      fn_table_upload_write_disposition, ") group ", fn_group_num, " of ",
+      fn_max_group_num, " of data (", nrow(fn_tibble_for_upload), " rows) to ", 
+      ifelse(output_bq_table_new, "new", "existing"), " BigQuery table ",
+      output_bq_table_full_name, "\n")
+      
+    cat(bq_upload_summary_text)
+  }
+  
+  if(tibble_num_groups == 1) { 
+    # No need to divide up table in this scenario, can just upload directly
+    nest_fn_upload_to_bq_and_print_summary(
+     fn_tibble_for_upload = tibble_for_bq_upload, 
+     fn_table_upload_write_disposition = table_upload_write_disposition
+     )
+  } else {
+    cat(paste0("\nData to upload is potentially large, will be divided into ",
+      tibble_num_groups, " groups for uploading to BigQuery.\n")
+      )
+    
+    # Divide tibble into # groups determined above, in row # order, then nest
+    # (split) tibbles for upload in list-column
+    tibble_for_bq_upload_by_group_nest <- tibble_for_bq_upload %>%
+      mutate(
+        upload_group = (row_number() / nrow(tibble_for_bq_upload) * 
+          tibble_num_groups) %>% ceiling()
+        ) %>%
+      nest_by(upload_group, .key = "slice_tibble_for_bq_upload") %>%
+      ungroup()
+    
+    if(table_upload_write_disposition == 'WRITE_TRUNCATE')
+    {
+      # If original table upload write disposition is WRITE_TRUNCATE...
+      # Filter down to 1st upload group and unnest data to be uploaded
+      first_slice_tibble_for_bq_upload <- tibble_for_bq_upload_by_group_nest %>% 
+        filter(upload_group == 1) %>%
+        select(slice_tibble_for_bq_upload) %>%
+        unnest(slice_tibble_for_bq_upload)
+
+      # Upload 1st group by itself to make new table (& replace any old data)..
+      nest_fn_upload_to_bq_and_print_summary(
+        fn_tibble_for_upload = first_slice_tibble_for_bq_upload, 
+        fn_table_upload_write_disposition = 'WRITE_TRUNCATE',
+        fn_max_group_num = tibble_num_groups
+        )
+      
+      rm(first_slice_tibble_for_bq_upload)      
+      # ...then remove 1st group, set up for rest to be uploaded outside of loop
+      tibble_for_bq_upload_by_group_nest <- (tibble_for_bq_upload_by_group_nest
+        %>% filter(upload_group != 1))
+    }
+    
+    # Parallelize uploading rest of groups - could be all groups (if original 
+    # table was to be appended) or all minus 1st (if original was to create/
+    # replace) - all appending (w/ no regard for order) at this point since
+    # replacing/creating table already happened w/ 1st group if necessary (and 
+    # using "WRITE_TRUNCATE" again would overwrite other groups from same data)
+    pwalk(
+      with(tibble_for_bq_upload_by_group_nest,
+        list(
+          fn_tibble_for_upload = slice_tibble_for_bq_upload,
+          fn_table_upload_write_disposition = 'WRITE_APPEND',
+          fn_group_num = upload_group,
+          fn_max_group_num = tibble_num_groups
+          )
+        ),
+      nest_fn_upload_to_bq_and_print_summary
+      )
+  }
 }

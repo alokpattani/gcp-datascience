@@ -1,0 +1,221 @@
+OlympicsCountry,OlympicsCountryCode,OlympicsCountryGroup,WorldBankCountryCode,GeminiSupportedLanguage,In2024
+Afghanistan,AFG,AFG,AFG,,TRUE
+Albania,ALB,ALB,ALB,,TRUE
+Algeria,ALG,ALG,DZA,Arabic,TRUE
+American Samoa,ASA,ASA,ASM,English,TRUE
+Andorra,AND,AND,AND,Spanish,TRUE
+Angola,ANG,ANG,AGO,Portuguese,TRUE
+Antigua and Barbuda,ANT,ANT,ATG,English,TRUE
+Argentina,ARG,ARG,ARG,Spanish,TRUE
+Armenia,ARM,ARM,ARM,Russian,TRUE
+Aruba,ARU,ARU,ABW,Dutch,TRUE
+Australia,AUS,AUS,AUS,English,TRUE
+Austria,AUT,AUT,AUT,German,TRUE
+Azerbaijan,AZE,AZE,AZE,Russian,TRUE
+Bahamas,BAH,BAH,BHS,English,TRUE
+Bahrain,BRN,BRN,BHR,Arabic,TRUE
+Bangladesh,BAN,BAN,BGD,Bengali,TRUE
+Barbados,BAR,BAR,BRB,English,TRUE
+Belarus,BLR,BLR,BLR,Russian,FALSE
+Belgium,BEL,BEL,BEL,Dutch,TRUE
+Belize,BIZ,BIZ,BLZ,English,TRUE
+Benin,BEN,BEN,BEN,French,TRUE
+Bermuda,BER,BER,BMU,English,TRUE
+Bhutan,BHU,BHU,BTN,,TRUE
+Bolivia,BOL,BOL,BOL,Spanish,TRUE
+Bosnia and Herzegovina,BIH,BIH,BIH,,TRUE
+Botswana,BOT,BOT,BWA,English,TRUE
+Brazil,BRA,BRA,BRA,Portuguese,TRUE
+British Virgin Islands,IVB,IVB,VGB,English,TRUE
+Brunei,BRU,BRU,BRN,,TRUE
+Bulgaria,BUL,BUL,BGR,Bulgarian,TRUE
+Burkina Faso,BUR,BUR,BFA,French,TRUE
+Burundi,BDI,BDI,BDI,French,TRUE
+Cambodia,CAM,CAM,KHM,,TRUE
+Cameroon,CMR,CMR,CMR,French,TRUE
+Canada,CAN,CAN,CAN,English,TRUE
+Cape Verde,CPV,CPV,CPV,Portuguese,TRUE
+Cayman Islands,CAY,CAY,CYM,English,TRUE
+Central African Republic,CAF,CAF,CAF,French,TRUE
+Chad,CHA,CHA,TCD,Arabic,TRUE
+Chile,CHI,CHI,CHL,Spanish,TRUE
+China,CHN,CHN,CHN,Chinese,TRUE
+Chinese Taipei,TPE,TPE,,Chinese,TRUE
+Colombia,COL,COL,COL,Spanish,TRUE
+Comoros,COM,COM,COM,Arabic,TRUE
+Cook Islands,COK,COK,,English,TRUE
+Costa Rica,CRC,CRC,CRI,Spanish,TRUE
+Croatia,CRO,CRO,HRV,Croatian,TRUE
+Cuba,CUB,CUB,CUB,Spanish,TRUE
+Cyprus,CYP,CYP,CYP,Greek,TRUE
+Czech Republic,CZE,CZE/TCH,CZE,Czech,TRUE
+Czechoslovakia,TCH,CZE/TCH,CZE,Czech,FALSE
+Democratic Republic of the Congo,COD,COD,COD,French,TRUE
+Denmark,DEN,DEN,DNK,Danish,TRUE
+Djibouti,DJI,DJI,DJI,Arabic,TRUE
+Dominica,DMA,DMA,DMA,English,TRUE
+Dominican Republic,DOM,DOM,DOM,Spanish,TRUE
+East Germany,GDR,GDR,,German,FALSE
+East Timor,TLS,TLS,TLS,Portuguese,TRUE
+Ecuador,ECU,ECU,ECU,Spanish,TRUE
+Egypt,EGY,EGY,EGY,Arabic,TRUE
+El Salvador,ESA,ESA,SLV,Spanish,TRUE
+Equatorial Guinea,GEQ,GEQ,GNQ,French,TRUE
+Eritrea,ERI,ERI,ERI,Arabic,TRUE
+Estonia,EST,EST,EST,Estonian,TRUE
+Eswatini,SWZ,SWZ,SWZ,English,TRUE
+Ethiopia,ETH,ETH,ETH,,TRUE
+Federated States of Micronesia,FSM,FSM,FSM,English,TRUE
+Fiji,FIJ,FIJ,FJI,English,TRUE
+Finland,FIN,FIN,FIN,Finnish,TRUE
+France,FRA,FRA,FRA,French,TRUE
+Gabon,GAB,GAB,GAB,French,TRUE
+Georgia,GEO,GEO,GEO,Russian,TRUE
+Germany,GER,GER/FRG,DEU,German,TRUE
+Ghana,GHA,GHA,GHA,English,TRUE
+Great Britain,GBR,GBR,GBR,English,TRUE
+Greece,GRE,GRE,GRC,Greek,TRUE
+Grenada,GRN,GRN,GRD,English,TRUE
+Guam,GUM,GUM,GUM,English,TRUE
+Guatemala,GUA,GUA,GTM,Spanish,TRUE
+Guinea,GUI,GUI,GIN,French,TRUE
+Guinea-Bissau,GBS,GBS,GNB,Portuguese,TRUE
+Guyana,GUY,GUY,GUY,English,TRUE
+Haiti,HAI,HAI,HTI,French,TRUE
+Honduras,HON,HON,HND,Spanish,TRUE
+Hong Kong,HKG,HKG,HKG,Chinese,TRUE
+Hungary,HUN,HUN,HUN,Hungarian,TRUE
+Iceland,ISL,ISL,ISL,,TRUE
+Independent Olympic Athletes,IOA,IOA,,,FALSE
+Independent Olympic Participants,IOP,IOP,,,FALSE
+India,IND,IND,IND,Hindi,TRUE
+Individual Neutral Athletes,AIN,AIN,,,TRUE
+Indonesia,INA,INA,IDN,Indonesian,TRUE
+Iran,IRI,IRI,IRN,,TRUE
+Iraq,IRQ,IRQ,IRQ,Arabic,TRUE
+Ireland,IRL,IRL,IRL,English,TRUE
+Israel,ISR,ISR,ISR,Hebrew,TRUE
+Italy,ITA,ITA,ITA,Italian,TRUE
+Ivory Coast,CIV,CIV,CIV,French,TRUE
+Jamaica,JAM,JAM,JAM,English,TRUE
+Japan,JPN,JPN,JPN,Japanese,TRUE
+Jordan,JOR,JOR,JOR,Arabic,TRUE
+Kazakhstan,KAZ,KAZ,KAZ,Russian,TRUE
+Kenya,KEN,KEN,KEN,Swahili,TRUE
+Kiribati,KIR,KIR,KIR,English,TRUE
+Kosovo,KOS,KOS,XKX,Serbian,TRUE
+Kuwait,KUW,KUW,KWT,Arabic,TRUE
+Kyrgyzstan,KGZ,KGZ,KGZ,Russian,TRUE
+Laos,LAO,LAO,LAO,,TRUE
+Latvia,LAT,LAT,LVA,Latvian,TRUE
+Lebanon,LBN,LBN,LBN,Arabic,TRUE
+Lesotho,LES,LES,LSO,English,TRUE
+Liberia,LBR,LBR,LBR,English,TRUE
+Libya,LBA,LBA,LBY,Arabic,TRUE
+Liechtenstein,LIE,LIE,LIE,German,TRUE
+Lithuania,LTU,LTU,LTU,Lithuanian,TRUE
+Luxembourg,LUX,LUX,LUX,French,TRUE
+Macedonia,MKD,MKD,MKD,,FALSE
+Madagascar,MAD,MAD,MDG,French,TRUE
+Malawi,MAW,MAW,MWI,English,TRUE
+Malaysia,MAS,MAS,MYS,,TRUE
+Maldives,MDV,MDV,MDV,English,TRUE
+Mali,MLI,MLI,MLI,,TRUE
+Malta,MLT,MLT,MLT,English,TRUE
+Marshall Islands,MHL,MHL,MHL,English,TRUE
+Mauritania,MTN,MTN,MRT,Arabic,TRUE
+Mauritius,MRI,MRI,MUS,English,TRUE
+Mexico,MEX,MEX,MEX,Spanish,TRUE
+Moldova,MDA,MDA,MDA,Romanian,TRUE
+Monaco,MON,MON,MCO,French,TRUE
+Mongolia,MGL,MGL,MNG,,TRUE
+Montenegro,MNE,MNE,MNE,,TRUE
+Morocco,MAR,MAR,MAR,Arabic,TRUE
+Mozambique,MOZ,MOZ,MOZ,Portuguese,TRUE
+Myanmar,MYA,MYA,MMR,,TRUE
+Namibia,NAM,NAM,NAM,English,TRUE
+Nauru,NRU,NRU,NRU,English,TRUE
+Nepal,NEP,NEP,NPL,,TRUE
+Netherlands,NED,NED,NLD,Dutch,TRUE
+Netherlands Antilles,AHO,AHO,,,FALSE
+New Zealand,NZL,NZL,NZL,English,TRUE
+Nicaragua,NCA,NCA,NIC,Spanish,TRUE
+Niger,NIG,NIG,NER,French,TRUE
+Nigeria,NGR,NGR,NGA,English,TRUE
+North Korea,PRK,PRK,PRK,Korean,TRUE
+North Macedonia,MKD,MKD,MKD,,TRUE
+Norway,NOR,NOR,NOR,Norwegian,TRUE
+Oman,OMA,OMA,OMN,Arabic,TRUE
+Pakistan,PAK,PAK,PAK,Urdu,TRUE
+Palau,PLW,PLW,PLW,English,TRUE
+Palestine,PLE,PLE,PSE,Arabic,TRUE
+Panama,PAN,PAN,PAN,Spanish,TRUE
+Papua New Guinea,PNG,PNG,PNG,,TRUE
+Paraguay,PAR,PAR,PRY,Spanish,TRUE
+Peru,PER,PER,PER,Spanish,TRUE
+Philippines,PHI,PHI,PHL,,TRUE
+Poland,POL,POL,POL,Polish,TRUE
+Portugal,POR,POR,PRT,Portuguese,TRUE
+Puerto Rico,PUR,PUR,PRI,Spanish,TRUE
+Qatar,QAT,QAT,QAT,Arabic,TRUE
+Refugee Olympic Team,EOR,EOR,,,TRUE
+Republic of the Congo,CGO,CGO,COG,French,TRUE
+ROC,ROC,ROC/RUS/EUN/URS,RUS,Russian,FALSE
+Romania,ROU,ROU,ROU,Romanian,TRUE
+Russia,RUS,ROC/RUS/EUN/URS,RUS,Russian,FALSE
+Rwanda,RWA,RWA,RWA,English,TRUE
+Saint Kitts and Nevis,SKN,SKN,KNA,English,TRUE
+Saint Lucia,LCA,LCA,LCA,English,TRUE
+Saint Vincent and the Grenadines,VIN,VIN,VCT,English,TRUE
+Samoa,SAM,SAM,WSM,English,TRUE
+San Marino,SMR,SMR,SMR,Italian,TRUE
+São Tomé and Príncipe,STP,STP,STP,Portuguese,TRUE
+Saudi Arabia,KSA,KSA,SAU,Arabic,TRUE
+Senegal,SEN,SEN,SEN,French,TRUE
+Serbia,SRB,SRB,SRB,Serbian,TRUE
+Serbia and Montenegro,SCG,SCG/YUG,,Serbian,FALSE
+Seychelles,SEY,SEY,SYC,English,TRUE
+Sierra Leone,SLE,SLE,SLE,English,TRUE
+Singapore,SIN,SIN,SGP,English,TRUE
+Slovakia,SVK,SVK,SVK,Slovak,TRUE
+Slovenia,SLO,SLO,SVN,Slovenian,TRUE
+Solomon Islands,SOL,SOL,SLB,English,TRUE
+Somalia,SOM,SOM,SOM,Arabic,TRUE
+South Africa,RSA,RSA,ZAF,English,TRUE
+South Korea,KOR,KOR,KOR,Korean,TRUE
+South Sudan,SSD,SSD,SSD,English,TRUE
+Soviet Union,URS,ROC/RUS/EUN/URS,RUS,Russian,FALSE
+Spain,ESP,ESP,ESP,Spanish,TRUE
+Sri Lanka,SRI,SRI,LKA,Tamil,TRUE
+Sudan,SUD,SUD,SDN,Arabic,TRUE
+Suriname,SUR,SUR,SUR,Dutch,TRUE
+Sweden,SWE,SWE,SWE,Swedish,TRUE
+Switzerland,SUI,SUI,CHE,German,TRUE
+Syria,SYR,SYR,SYR,Arabic,TRUE
+Tajikistan,TJK,TJK,TJK,Russian,TRUE
+Tanzania,TAN,TAN,TZA,Swahili,TRUE
+Thailand,THA,THA,THA,Thai,TRUE
+The Gambia,GAM,GAM,GMB,English,TRUE
+Togo,TOG,TOG,TGO,French,TRUE
+Tonga,TGA,TGA,TON,English,TRUE
+Trinidad and Tobago,TRI,TRI,TTO,English,TRUE
+Tunisia,TUN,TUN,TUN,Arabic,TRUE
+Turkey,TUR,TUR,TUR,Turkish,TRUE
+Turkmenistan,TKM,TKM,TKM,Russian,TRUE
+Tuvalu,TUV,TUV,TUV,English,TRUE
+Uganda,UGA,UGA,UGA,English,TRUE
+Ukraine,UKR,UKR,UKR,Ukranian,TRUE
+Unified Team,EUN,ROC/RUS/EUN/URS,RUS,Russian,FALSE
+United Arab Emirates,UAE,UAE,ARE,Arabic,TRUE
+United States,USA,USA,USA,English,TRUE
+Uruguay,URU,URU,URY,Spanish,TRUE
+Uzbekistan,UZB,UZB,UZB,Russian,TRUE
+Vanuatu,VAN,VAN,VUT,English,TRUE
+Venezuela,VEN,VEN,VEN,Spanish,TRUE
+Vietnam,VIE,VIE,VNM,Vietnamese,TRUE
+Virgin Islands,ISV,ISV,VIR,English,TRUE
+West Germany,FRG,GER/FRG,DEU,German,FALSE
+Yemen,YEM,YEM,YEM,Arabic,TRUE
+Yugoslavia,YUG,SCG/YUG,,Serbian,FALSE
+Zambia,ZAM,ZAM,ZMB,English,TRUE
+Zimbabwe,ZIM,ZIM,ZWE,,TRUE

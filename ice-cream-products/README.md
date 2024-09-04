@@ -4,10 +4,10 @@ This folder contains [BigQuery](cloud.google.com/bigquery) SQL code showing how 
 
 The SQL scripts in this folder are numbered in order of how they should be run to create the results, with the full process outlined in the following 2 blog posts:
 - ["Building Out 🍨 Ice Cream 🍦 Product Assets at Scale with Gemini"](https://medium.com/google-cloud/building-out-ice-cream-product-assets-at-scale-with-gemini-8b629246345b)
-- (LINK TO COME) Getting 🍨 Ice Cream 🍦 Recommendations at Scale with Gemini, Embeddings, and Vector Search
+- (LINK TO COME) "Getting 🍨 Ice Cream 🍦 Recommendations at Scale with Gemini, Embeddings, and Vector Search"
 
 Results from this work can be found in the following interactive dashboards:
-- [goo.gle/icecreamproducts](goo.gle/icecreamproducts)
-- [goo.gle/icecreamproductrecs](goo.gle/icecreamproductrecs)
+- [goo.gle/icecreamproducts](https://lookerstudio.google.com/c/u/0/reporting/f64d610a-4a2d-4fd4-9fbb-ab5e6f9d392f/page/fU1uB)
+- [goo.gle/icecreamproductrecs](https://lookerstudio.google.com/c/u/0/reporting/f64d610a-4a2d-4fd4-9fbb-ab5e6f9d392f/page/p_f5tdpmynkd)
 
 Disclaimer: Not an official Google product. Sample code provided is for educational purposes only.

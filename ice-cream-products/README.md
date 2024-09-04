@@ -1,6 +1,10 @@
 # Ice Cream Products - Asset Generation and Recommendations at Scale
 
-This folder contains BigQuery SQL code showing how to use generative AI with [this well-curated Kaggle dataset of 240+ ice cream products](https://www.kaggle.com/datasets/tysonpo/ice-cream-dataset/data) to create assets (short product descriptions, alt text, and review summaries and recommendations (which products are similar to a given product) at scale.
+This folder contains [BigQuery](cloud.google.com/bigquery) SQL code showing how to use generative AI with [this well-curated Kaggle dataset of 240+ ice cream products](https://www.kaggle.com/datasets/tysonpo/ice-cream-dataset/data) to create assets (short product descriptions, alt text, and review summaries) and recommendations (which products are similar to a given product) at scale, leveraging the integration of [Vertex AI](cloud.google.com/vertex-ai) with BigQuery on [Google Cloud](cloud.google.com).
+
+The SQL scripts in this folder are numbered in order of how they should be run to create the results, with the full process outlined in the following 2 blog posts:
+- ["Building Out 🍨 Ice Cream 🍦 Product Assets at Scale with Gemini"](https://medium.com/google-cloud/building-out-ice-cream-product-assets-at-scale-with-gemini-8b629246345b)
+- (LINK TO COME) Getting 🍨 Ice Cream 🍦 Recommendations at Scale with Gemini, Embeddings, and Vector Search
 
 Results from this work can be found in the following interactive dashboards:
 - [goo.gle/icecreamproducts](goo.gle/icecreamproducts)

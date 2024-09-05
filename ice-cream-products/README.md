@@ -6,7 +6,7 @@ The SQL scripts in this folder are numbered in order of how they should be run t
 - ["Building Out 🍨 Ice Cream 🍦 Product Assets at Scale with Gemini"](https://medium.com/google-cloud/building-out-ice-cream-product-assets-at-scale-with-gemini-8b629246345b) (corresponds to SQL scripts 01-06)
 - ["Getting 🍨 Ice Cream 🍦 Recommendations at Scale with Gemini, Embeddings, and Vector Search"](https://medium.com/google-cloud/getting-ice-cream-recommendations-at-scale-with-gemini-embeddings-and-vector-search-cf1f61a3d55b) (corresponds to SQL scripts 07-09)
 
-Results from this work can be found in the following interactive dashboard pages (Pages 1 and 2 of same Looker Studio dashboard):
+Results from this work can be found in the following interactive dashboard pages (Pages 1 and 2 of the same Looker Studio dashboard):
 - [goo.gle/icecreamproducts](https://lookerstudio.google.com/c/u/0/reporting/f64d610a-4a2d-4fd4-9fbb-ab5e6f9d392f/page/fU1uB)
 - [goo.gle/icecreamproductrecs](https://lookerstudio.google.com/c/u/0/reporting/f64d610a-4a2d-4fd4-9fbb-ab5e6f9d392f/page/p_f5tdpmynkd)
 
